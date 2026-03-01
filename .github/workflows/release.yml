@@ -29,4 +29,4 @@ jobs:
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_CONFIG_PROVENANCE: 'true' # enables OIDC provenance attestation
+          # NPM auth is handled via OIDC Trusted Publishing — no NPM_TOKEN needed
