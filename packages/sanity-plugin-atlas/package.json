@@ -1,0 +1,50 @@
+{
+  "name": "sanity-plugin-atlas",
+  "version": "0.0.0",
+  "description": "Because schemas don't come with a map",
+  "keywords": [
+    "sanity",
+    "sanity-plugin"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "watch": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "link-watch": "yalc publish && tsup --watch --onSuccess \"yalc push\""
+  },
+  "peerDependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "sanity": "^5.12.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "sanity": "^5.12.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
