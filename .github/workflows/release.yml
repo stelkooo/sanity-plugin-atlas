@@ -26,7 +26,7 @@ jobs:
 
       - run: bun run build
 
-      - run: npx semantic-release
+      - run: bun run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # NPM auth is handled via OIDC Trusted Publishing — no NPM_TOKEN needed
