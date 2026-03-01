@@ -12,7 +12,8 @@
     "lint": "biome check .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "release:dry": "semantic-release --dry-run"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.4",
